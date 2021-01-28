@@ -1,22 +1,22 @@
 module Styles = {
   open Tailwind
 
-  let orderedElementStyles = merge(.[mb4])
+  let orderedElementStyles = twStyle([mb(#v4)])
 
-  let numerationStyles = merge(.[
-    textIndigo800(1.),
-    pr1_5,
-    borderR,
-    roundedRFull,
-    borderIndigo800(1.),
-    mr3,
+  let numerationStyles = twStyle([
+    borderR(#v1),
+    pr(#v1_5),
+    roundedR(#full),
+    borderColor(#indigo800),
+    mr(#v3),
     inlineFlex,
+    textColor(#indigo800),
   ])
 }
 
 @react.component
 let make = (~children, ~className="", ~order) => {
-  <li className={CssJs.merge(.[Styles.orderedElementStyles, className])}>
+  <li className={Tailwind.merge(.[Styles.orderedElementStyles, className])}>
     <span className=Styles.numerationStyles> {React.string(Belt.Int.toString(order))} </span>
     children
   </li>

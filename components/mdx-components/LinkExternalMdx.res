@@ -1,12 +1,12 @@
 module Styles = {
   open Tailwind
-  // font-bold underline cursor-pointer text-blue-700
-  let elementStyles = CssJs.merge(.[
-    fontBold,
-    borderB,
-    borderBlue700(1.),
+
+  let elementStyles = twStyle([
+    borderColor(#blue700),
+    borderB(#v1),
     cursorPointer,
-    textBlue700(1.),
+    textColor(#blue700),
+    fontWeight(#v700),
   ])
 }
 
@@ -16,6 +16,6 @@ let make = (~children, ~className="", ~href) =>
     href
     target="_blank"
     rel="noopener noreferrer"
-    className={CssJs.merge(.[Styles.elementStyles, className])}>
+    className={Tailwind.merge(.[Styles.elementStyles, className])}>
     children
   </a>
