@@ -1,71 +1,70 @@
 module Styles = {
     // Module contents
     open Tailwind
-    open CssJs
 
-    let globalStyles = style(.[backgroundColor(#hex("047aed")), fontWeight(#num(400))])
+    let background = twStyle([bg(#blue500)])
 
-    let header = merge(.[mx80, p6, itemsCenter, textWhite(1.)])
-
-    let navbar = merge(.[Tailwind.flex, justifyBetween, itemsCenter, mb8])
-
-    let logo = merge(.[text4Xl, itemsCenter])
-
-    let navUl = merge(.[Tailwind.flex, itemsCenter])
-
-    let anchor = merge(.[mx4])
-
-    let featuresSection = merge(.[mx80, pb12])
-
-    let featuresFlex = merge(.[Tailwind.flex, itemsCenter, textWhite(1.), justifyBetween])
-
-    let featuresImage = merge(.[h48, w48])
-
-    let featuresHeading = merge(.[text6Xl, mb6])
-
-    let featuresParagraph = merge(.[textLg])
-
-    let docsSection = merge(.[bgWhite(1.), pt12, pb2])
-
-    let docsFlex = merge(.[Tailwind.flex, justifyBetween, itemsCenter, mx60, mb12])
-
-    let essentialsBackground = merge(.[bgGray100(1.), p8, textLeft, w76, rounded2Xl, shadow2Xl, mb92])
-
-    let docsHeading = merge(.[textLg, my4])
-
-    let docsParagraph = merge(.[borderB2, mb4])
-
-    let essentialsBackground2 = merge(.[bgWhite(1.), p8, textLeft, rounded2Xl, shadow2Xl])
-
-    let infoPop = merge(.[Tailwind.flex, justifyCenter, bgGreen500(1.), p2, itemsCenter, roundedLg, mt6])
-
-    let infoIcon = merge(.[w8, h8])
-
-    let popParagraph = merge(.[pl4])
-
-    let introductionHeading = merge(.[text2Xl,mb2])
-
-    let introductionHeading2 = merge(.[textLg, my4])
-
-    let cliInstall = merge(.[bgBlue500(1.), my4, p2, w36, roundedLg, textWhite(1.)])
-
-    let codePre = merge(.[bgGray800(1.), textWhite(1.), p2, my2, roundedLg])
-
-    let footerSection = merge(.[bgIndigo900(1.), textWhite(1.)])
+    let header = twStyle([mx(#v80), p(#v6), itemsCenter, textColor(#white)])
     
-    let footerFlex = merge(.[Tailwind.flex, justifyBetween, itemsCenter, mx56, py18])
+    let navbar = twStyle([flex, justifyBetween, itemsCenter, mb(#v24)])
 
-    let footerLeft = merge(.[Tailwind.block, textLeft, itemsCenter])
+    let logo = twStyle([text(#xl4), itemsCenter])
 
-    let footerHeading = merge(.[text3Xl])
+    let navUl = twStyle([flex, itemsCenter])
 
-    let footerRight = merge(.[Tailwind.flex, h14, w14, mr28])
+    let anchor = twStyle([mx(#v4)])
 
-    let footerImage = merge(.[mx4])
+    let featuresSection = twStyle([mx(#v80), pb(#v12)])
+
+    let featuresFlex = twStyle([flex, itemsCenter, textColor(#white), justifyBetween])
+
+    let featuresImage = twStyle([h(#v48), w(#v48)])
+
+    let featuresHeading = twStyle([text(#xl6), mb(#v6)])
+
+    let featuresParagraph = twStyle([text(#lg)])
+
+    let docsSection = twStyle([bg(#white), pt(#v12), pb(#v2)])
+
+    let docsFlex = twStyle([flex, justifyBetween, itemsCenter, mx(#v60), mb(#v12)])
+
+    let essentialsBackground = twStyle([bg(#gray100), p(#v8), textLeft, w(#v76), rounded(#xl2), shadow(#xl2), mb(#v92)])
+
+    let docsHeading = twStyle([text(#lg), my(#v4)])
+
+    let docsParagraph = twStyle([borderB(#v2), mb(#v4)])
+
+    let essentialsBackground2 = twStyle([bg(#white), p(#v8), textLeft, rounded(#xl2), shadow(#xl2)])
+
+    let infoPop = twStyle([flex, justifyCenter, bg(#green500), p(#v2), itemsCenter, rounded(#lg), mt(#v6)])
+
+    let infoIcon = twStyle([w(#v8), h(#v8)])
+
+    let popParagraph = twStyle([pl(#v4)])
+
+    let introductionHeading = twStyle([text(#xl2),mb(#v2)])
+
+    let introductionHeading2 = twStyle([text(#lg), my(#v4)])
+
+    let cliInstall = twStyle([bg(#blue500), my(#v4), p(#v2), w(#v36), rounded(#lg), textColor(#white)])
+
+    let codePre = twStyle([bg(#gray800), textColor(#white), p(#v2), my(#v2), rounded(#lg)])
+
+    let footerSection = twStyle([bg(#indigo900), textColor(#white)])
+    
+    let footerFlex = twStyle([flex, justifyBetween, itemsCenter, mx(#v56), py(#v18)])
+
+    let footerLeft = twStyle([block, textLeft, itemsCenter])
+
+    let footerHeading = twStyle([text(#xl3)])
+
+    let footerRight = twStyle([flex, h(#v14), w(#v14), mr(#v28)])
+
+    let footerImage = twStyle([mx(#v4)])
 }
 
 let default = () => {
-    <main className=Styles.globalStyles>
+    <main className=Styles.background>
         <header className=Styles.header>
         <nav className=Styles.navbar>
             <div>

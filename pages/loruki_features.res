@@ -1,71 +1,70 @@
 module Styles = {
     // Module contents
     open Tailwind
-    open CssJs
 
-    let globalStyles = style(.[backgroundColor(#hex("047aed")), fontWeight(#num(400))])
+    let background = twStyle([bg(#blue500)])
 
-    let header = merge(.[mx80, p6, itemsCenter, textWhite(1.)])
+    let header = twStyle([mx(#v80), p(#v6), itemsCenter, textColor(#white)])
 
-    let navbar = merge(.[Tailwind.flex, justifyBetween, itemsCenter, mb8])
+    let navbar = twStyle([flex, justifyBetween, itemsCenter, mb(#v24)])
 
-    let logo = merge(.[text4Xl, itemsCenter])
+    let logo = twStyle([text(#xl4), itemsCenter])
 
-    let navUl = merge(.[Tailwind.flex, itemsCenter])
+    let navUl = twStyle([flex, itemsCenter])
 
-    let anchor = merge(.[mx4])
+    let anchor = twStyle([mx(#v4)])
 
-    let featuresSection = merge(.[mx80, pb12])
+    let featuresSection = twStyle([mx(#v80), pb(#v12)])
 
-    let featuresFlex = merge(.[Tailwind.flex, itemsCenter, textWhite(1.), justifyBetween])
+    let featuresFlex = twStyle([flex, itemsCenter, textColor(#white), justifyBetween])
 
-    let featuresImage = merge(.[h48, w48])
+    let featuresImage = twStyle([h(#v48), w(#v48)])
 
-    let featuresHeading = merge(.[text7Xl, mb6])
+    let featuresHeading = twStyle([text(#xl7), mb(#v6)])
 
-    let featuresParagraph = merge(.[textLg])
+    let featuresParagraph = twStyle([text(#lg)])
 
-    let platformSection = merge(.[py12, bgGray100(1.)])
+    let platformSection = twStyle([py(#v12), bg(#gray100)])
 
-    let platformFlex = merge(.[Tailwind.flex, mx80, itemsCenter, textBlack(1.), justifyBetween])
+    let platformFlex = twStyle([flex, mx(#v80), itemsCenter, textColor(#black), justifyBetween])
 
-    let platformImage = merge(.[h80, w80])
+    let platformImage = twStyle([h(#v80), w(#v80)])
 
-    let platformHeading = merge(.[text3Xl, mb6])
+    let platformHeading = twStyle([text(#xl3), mb(#v6)])
 
-    let platformParagraph = merge(.[textSm])
+    let platformParagraph = twStyle([text(#sm)])
 
-    let row1 = merge(.[Tailwind.flex, p8, mb10, shadowXl, roundedXl, itemsCenter, justifyCenter])
+    let row1 = twStyle([flex, p(#v8), mb(#v10), shadow(#xl), rounded(#xl), itemsCenter, justifyCenter])
 
-    let row2 = merge(.[Tailwind.flex, mb2, itemsCenter, justifyBetween])
+    let row2 = twStyle([flex, mb(#v2), itemsCenter, justifyBetween])
 
-    let imageControl = merge(.[Tailwind.flex, itemsCenter, w10, h10, mr4])
+    let imageControl = twStyle([flex, itemsCenter, w(#v10), h(#v10), mr(#v4)])
 
-    let gridSection = merge(.[bgWhite(1.)])
+    let gridSection = twStyle([bg(#white)])
 
-    let sectionBackground = merge(.[mx52, py12])
+    let sectionBackground = twStyle([mx(#v52), py(#v12)])
 
-    let rowFlex = merge(.[Tailwind.flex])
+    let rowFlex = twStyle([flex])
 
-    let rowFlex2 = merge(.[Tailwind.flex, p8, pr20, h40, mb10, shadowXl, roundedXl, itemsCenter, justifyCenter])
+    let rowFlex2 = twStyle([flex, p(#v8), pr(#v20), h(#v40), mb(#v10), shadow(#xl), rounded(#xl), itemsCenter, justifyCenter])
 
-    let rowFlex3 = merge(.[Tailwind.flex, p8, pl12, h40, mb10, shadowXl, roundedXl, itemsCenter, justifyCenter])
+    let rowFlex3 = twStyle([flex, p(#v8), pl(#v12), h(#v40), mb(#v10), shadow(#xl), rounded(#xl), itemsCenter, justifyCenter])
 
-    let footerSection = merge(.[bgIndigo900(1.), textWhite(1.)])
+    let footerSection = twStyle([bg(#indigo900), textColor(#white)])
     
-    let footerFlex = merge(.[Tailwind.flex, justifyBetween, itemsCenter, mx56, py18])
+    let footerFlex = twStyle([flex, justifyBetween, itemsCenter, mx(#v56), py(#v18)])
 
-    let footerLeft = merge(.[Tailwind.block, textLeft, itemsCenter])
+    let footerLeft = twStyle([block, textLeft, itemsCenter])
 
-    let footerHeading = merge(.[text3Xl])
+    let footerHeading = twStyle([text(#xl3)])
 
-    let footerRight = merge(.[Tailwind.flex, h14, w14, mr28])
+    let footerRight = twStyle([flex, h(#v14), w(#v14), mr(#v28)])
 
-    let footerImage = merge(.[mx4])
+    let footerImage = twStyle([mx(#v4)])
 }
 
 let default = () => {
-    <main className=Styles.globalStyles>
+    <main className=Styles.background>
         <header className=Styles.header>
         <nav className=Styles.navbar>
             <div>
